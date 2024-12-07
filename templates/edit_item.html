@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Edit Item</title>
+</head>
+<body>
+    <h1>Edit Item</h1>
+    <form method="post">
+        <label>Item: <input type="text" name="item" value="{{ item.item }}"></label><br>
+        <label>Size: <select name="size">
+            <option value="large" {% if item.size == 'large' %}selected{% endif %}>Large</option>
+            <option value="small" {% if item.size == 'small' %}selected{% endif %}>Small</option>
+        </select></label><br>
+        <label>Price: <input type="text" name="price" value="{{ item.price }}"></label><br>
+        <label>Note: <input type="text" name="note" value="{{ item.note }}"></label><br>
+        <button type="submit">Save</button>
+    </form>
+</body>
+</html>
